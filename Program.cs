@@ -14,11 +14,24 @@ namespace Line_Length
             double line1Length = LineLength();
             Console.WriteLine("Enter Co-ordinates of 2nd Line");
             double line2Length = LineLength();
-            string result = line1Length.Equals(line2Length) == true ? "Two lines are equal" : "Two lines are not equal";
-            Console.WriteLine(result);
+            int result = line1Length.CompareTo(line2Length);
+
+            switch (result)
+            {
+                case 0:
+                    Console.WriteLine("Two lines are equal");
+                    break;
+                case 1:
+                    Console.WriteLine("Line 1 is greater than Line 2");
+                    break;
+                default:
+                    Console.WriteLine("Line 2 is greater than Line 1");
+                    break;
+            }
         }
         public static double LineLength()
         {
+            //VARIABLES
             Console.Write("Enter 1st X co-ordinate of Line: ");
             double x11 = Convert.ToDouble(Console.ReadLine());
             Console.Write("Enter 1st Y co-ordinate of Line: ");
