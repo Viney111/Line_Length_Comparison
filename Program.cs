@@ -10,8 +10,21 @@ namespace Line_Length
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Line Comparison Computation Program");
-
+            double line1Length = LineLength();
+            Console.WriteLine($"The length of line is {line1Length}");
+        }
+        public static double LineLength()
+        {
+            Console.Write("Enter 1st X co-ordinate of Line: ");
+            double x11 = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Enter 1st Y co-ordinate of Line: ");
+            double y11 = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Enter 2nd X co-ordinate of Line: ");
+            double x12 = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Enter 2nd Y co-ordinate of Line: ");
+            double y12 = Convert.ToDouble(Console.ReadLine());
+            double lengthOfLine1 = Math.Pow(Math.Pow(x12 - x11, 2) + Math.Pow(y12 - y11, 2), 0.5);
+            return lengthOfLine1;
         }
     }
 }
