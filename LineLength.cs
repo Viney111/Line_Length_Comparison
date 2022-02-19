@@ -8,6 +8,7 @@ namespace Line_Length_Comparison
 {
     public class LineLength
     {
+        //VARIABLES
         int x1;
         int x2;
         int y1;

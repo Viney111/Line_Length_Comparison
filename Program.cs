@@ -11,12 +11,13 @@ namespace Line_Length
     {
         public static void Main(string[] args)
         {
+            //PASSING ARGUMENTS
             LineLength L1 = new LineLength(2, 2, 5, 6);
             double line1Length = L1.CalculatingLength();
-            Console.WriteLine($"The length of 1st line is {line1Length}");
+
             LineLength L2 = new LineLength(10, 9, 5, 6);
             double line2Length = L2.CalculatingLength();
-            Console.WriteLine($"The length of 2nd line is {line2Length}");
+
             int result = line1Length.CompareTo(line2Length);
             switch (result)
             {
